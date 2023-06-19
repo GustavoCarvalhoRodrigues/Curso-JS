@@ -1,5 +1,3 @@
 # Curso de JavaScript
 
 ** Exercícios **
-
-
