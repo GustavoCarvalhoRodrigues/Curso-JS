@@ -1,3 +1,3 @@
 # Curso de JavaScript
 
-**Exercícios**
+** Exercícios **
