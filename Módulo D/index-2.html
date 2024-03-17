@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="index-2.css">
+</head>
+
+<body>
+    <h1>Verificador de Idade</h1>
+    <!-- Selecione o seu sexo -->
+    <form action="index-2.js" method="post" autocomplete="on">
+        <label for="txtano">Ano Nascimento:</label>
+        <input type="number" name="txtano" id="txtano" min="0">
+        <label for="sexo">Sexo:</label>
+        <input type="radio" name="Tsex" id="m" checked>
+        <label for="m">masculino</label>
+        <input type="radio" name="Tsex" id="f">
+        <label for="f">feminino</label>
+        <input type="button" value="verificar">
+        <p>Preencha os dados acima para ver o resultado!</p>
+    </form>
+    <footer>
+        &copy; CursoemVideo
+    </footer>
+    <script src="index-2.js"></script>
+</body>
+
+</html>

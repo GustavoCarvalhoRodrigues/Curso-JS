@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<style>
+    input {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <h1>Selecionando Nacionalidade</h1>
+    <input type="button" value="mostrar">
+    <div id="res">
+
+    </div>
+    <script>
+        var botao = document.getElementsByTagName('input')[0]
+
+        botao.addEventListener('click', clicou)
+
+        function clicou() {
+            var country = window.prompt('Digite um país: ')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Vivendo em <strong>${country}</strong></p>`
+            if (country == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Brasileiro(a)!</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro(a)!</strong></p>'
+            }
+        }
+    </script>
+</body>
+
+</html>
