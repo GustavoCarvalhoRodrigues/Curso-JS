@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 5px 15px 5px 15px;
+    }
+</style>
+
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="cliqueDesconto()">
+        <p>Desconto de 10%</p>
+    </button>
+    <p id="resultado">Clique no botão acima para iniciar</p>
+    <script>
+        function cliqueDesconto() {
+            // Nome do produto
+            var nomeProduto = String(prompt('Qual é o produto que você está comprando?'))
+            // Valor desse produto
+            var ValorProduto = parseFloat(prompt(`Qual é o preço de ${nomeProduto}?`))
+            // Cálculo correto do desconto
+            var ValorDesconto = ValorProduto * (10 / 100)
+            // Pagamento total
+            var DTotal = ValorProduto - ValorDesconto
+            // Resultado
+            var res = document.getElementById('resultado')
+            
+            res.innerHTML = `<h2>Calculando desconto de 10% para ${nomeProduto}</h2>`
+            res.innerHTML += `<p>O preço original era R$ ${ValorProduto.toFixed(2).replace('.', ',')}.</p>`
+            res.innerHTML += `<p>Você acaba de ganhar R$ ${ValorDesconto.toFixed(2).replace('.', ',')} de desconto (-10%).</p>`
+            res.innerHTML += `<p>No fim, você vai pagar R$ ${DTotal.toFixed(2).replace('.', ',')} no produto ${nomeProduto}.</p>`
+        }
+    </script>
+</body>
+
+</html>

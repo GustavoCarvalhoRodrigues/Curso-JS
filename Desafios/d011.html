@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 5px 15px 5px 15px;
+
+    }
+</style>
+
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="CalcularAnoBissexto()">
+        <p>Verificar</p>
+    </button>
+    <p id="resultado">Informe um ano para saber se ele é bissexto</p>
+
+    <script>
+        function CalcularAnoBissexto() {
+
+            var ano = parseInt(prompt('Qual é o ano que você quer verificar?'))
+
+            var res = document.getElementById('resultado')
+
+            if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+                res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
+                res.innerHTML += `<p>
+                    O ano de ${ano} <mark style="background-color: rgba(0, 128, 0, 0.356); color: rgb(0, 128, 0)"><strong>É BISSEXTO</strong></mark><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                    <g fill="#fffefe" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(0,22.4) scale(2.13333,2.13333)"><ellipse cx="60" cy="64.5" rx="48" ry="48.5" fill="#000000" opacity="0.35"></ellipse><ellipse cx="60" cy="60.5" rx="48" ry="48.5" fill="#44bf00"></ellipse><path d="M53.303,88l-27.164,-27.162l7.443,-7.443l19.721,19.721l33.115,-33.116l7.443,7.443z" fill="#000000" opacity="0.35"></path><g fill="#85ff5e"><path d="M53.303,84l-27.164,-27.162l7.443,-7.443l19.721,19.721l33.115,-33.116l7.443,7.443z"></path></g></g></g>
+                    </svg>
+                </p>`
+            } else {
+                res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
+                res.innerHTML += `<p>O ano de ${ano} <mark style="background-color: rgba(255, 0, 0, 0.514); color: black"><strong>NÃO É BISSEXTO</strong></mark><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#f44336" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(-0.00189,44.80189) scale(5.33333,5.33333)"><path transform="translate(24.00059,-9.94113) rotate(45.001)" d="M21.5,4.5h5.001v39h-5.001z"></path><path transform="translate(57.94113,24.00474) rotate(135.008)" d="M21.5,4.5h5v39.001h-5z"></path></g></g>
+    </svg></p>`
+            }
+        }
+    </script>
+</body>
+
+</html>

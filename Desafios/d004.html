@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula troco</title>
+    <style>
+        button {
+            padding: 5px 15px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando Troco</h1>
+    <button onclick="Comprar()">
+        <p>Comprar Produto</p>
+    </button>
+
+
+    <script>
+        function Comprar() {
+            var nomeProduto = String(prompt('Qual produto você está comprando?'))
+
+            var valorProduto = parseFloat(prompt(`Quanto custa ${nomeProduto} que você está comprando?`))
+
+            var valorPago = parseFloat(prompt(`Qual foi o valor que você deu para pagar ${nomeProduto}?`))
+
+            var Troco = valorPago - valorProduto
+            
+            if (valorPago > valorProduto) {
+                alert(`Você comprou ${nomeProduto} que custou R$ ${valorProduto.toFixed(2).replace('.',',')}. \nDeu R$ ${valorPago.toFixed(2).replace('.',',')} em dinheiro e vai receber R$ ${Troco.toFixed(2).replace('.',',')} em troco.\nVolte Sempre!`)
+            } else {
+                alert('O valor pago é menor que o valor do produto. Por favor, insira um valor válido.')
+            }
+
+        }
+    </script>
+</body>
+
+</html>

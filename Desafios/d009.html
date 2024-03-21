@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 5px 15px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="reajuste()">
+        <p>Reajustar Salário</p>
+    </button>
+    <p id="resultado">Clique no botão acima para iniciar.</p>
+    <script>
+        function reajuste() {
+            // Nome do funcionário
+            var nomeFuncionario = String(prompt('Qual é o nome do funcionário?'))
+            // Salário  
+            var Sal = parseFloat(prompt(`Qual é o salário de ${nomeFuncionario}?`))
+            // Porcentagem aplicada no salário
+            var Porcentagem = Number(prompt(`O salário de ${nomeFuncionario} vai ser reajustado em qual porcentagem?`))
+            // Cálculo da porcentagem
+            var calculoP = Porcentagem / 100
+            // Quantidade aumentada ao salário
+            var AumentoSalarial = calculoP * Sal
+            //  Reajuste do salário
+            var reajusteSal = Sal + AumentoSalarial
+            // resultado
+            var res = document.getElementById('resultado')
+            res.innerHTML = `<h2>${nomeFuncionario} recebeu um aumento salarial!</h2>`
+            res.innerHTML += `<p>O salário atual era R$ ${Sal.toFixed(2).replace('.', ',')}.</p>`
+            res.innerHTML += `<p>Com um aumento de ${Porcentagem}%, o salário vai aumentar R$ ${AumentoSalarial.toFixed(2).replace('.', ',')} no próximo mês.</p>`
+            res.innerHTML += `<p>E a partir daí, ${nomeFuncionario} vai passar a ganhar R$ ${reajusteSal.toFixed(2).replace('.', ',')}.</p>`
+        }
+    </script>
+</body>
+
+</html>

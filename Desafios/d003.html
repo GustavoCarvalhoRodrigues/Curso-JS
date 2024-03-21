@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+</head>
+<style>
+    button {
+        padding: 5px 15px 5px 15px;
+    }
+</style>
+
+<body>
+    <h1>Antes e depois</h1>
+    <button onclick="AnteSucess()">
+        <p>Antecessor e Sucessor</p>
+    </button>
+
+    <script>
+        function AnteSucess() {
+            var num = parseInt(prompt('Digite um número inteiro qualquer'))
+            
+            alert(`Antes de ${num} temos o número ${num - 1}.\nDepois de ${num}, temos o número ${num + 1}`)
+        }
+
+    </script>
+</body>
+
+</html>

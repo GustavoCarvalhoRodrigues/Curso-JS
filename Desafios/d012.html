@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 5px 15px 5px 15px;
+    }
+</style>
+
+<body>
+    <h1>Preço Mudou</h1>
+    <button onclick="PreçoMudou()">
+        <p>Verificar</p>
+    </button>
+    <p id="resultado">Clique no botão acima para analisar a mudança de preço.</p>
+
+    <script>
+        function PreçoMudou() {
+            // Preço antigo
+            var PrecoAnteriorProduto = Number(prompt('Qual era o preço anterior do produto?'))
+            // Preço atual
+            var PrecoAtualProduto = Number(prompt('Qual é o preço atual do produto?'))
+            // Aumento
+            var AumentoPreco = PrecoAtualProduto - PrecoAnteriorProduto
+            // Variação do preço anterior ao atual
+            var VariacaoPreco = ((PrecoAtualProduto - PrecoAnteriorProduto) / PrecoAnteriorProduto) * 100
+            // Resultados
+            var res = document.getElementById('resultado')
+            res.innerHTML = '<h2>Analisando os valores informados</h2>'
+            res.innerHTML += `<p>O produto custava R$ ${PrecoAnteriorProduto.toFixed(2).replace('.', ',')} e agora custa R$ ${PrecoAtualProduto.toFixed(2).replace('.', ',')}</p>`
+            res.innerHTML += '<p>Hoje o produto está mais caro</p>'
+            res.innerHTML += `<p>O preço subiu R$ ${AumentoPreco.toFixed(2).replace('.', ',')} em relação ao preço anterior.</p>`
+            res.innerHTML += `<p>Uma variação de ${VariacaoPreco.toFixed(1).replace('.', ',')}% pra cima.</p>`
+        }
+    </script>
+</body>
+
+</html>

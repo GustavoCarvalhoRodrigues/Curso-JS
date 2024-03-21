@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+</head>
+<style>
+    button {
+        padding: 5px 15px 5px 15px;
+    }
+</style>
+
+<body>
+    <h1>Conversor R$ → US$</h1>
+    <button onclick="converta()">
+        <p>converter</p>
+    </button>
+    <p id="resultado">Clique no botão acima para iniciar.</p>
+
+    <script>
+        var CotaDolar = parseFloat(prompt('Antes de mais nada. Quanto está a cotação do dólar agora? R$').replace(',', '.'))
+
+        function converta() {
+            var res = document.getElementById('resultado')
+
+            var minhaCarteira = parseFloat(prompt('Quantos R$ você tem na carteira?'))
+
+            var ValorTotal = (minhaCarteira / CotaDolar)
+
+            res.innerHTML = `<h2>Este ano a cotação do dólar atual US$${CotaDolar}...</h2>`
+
+            res.innerHTML += `<p>R$${ValorTotal.toFixed(2)} reais</p>`
+
+        }
+    </script>
+</body>
+
+</html>
