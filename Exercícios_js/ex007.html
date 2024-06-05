@@ -1,49 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt=br">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex07.css">
     <title>Números com JS</title>
 </head>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    button {
-        padding: 30px;
-    }
-</style>
-
 <body>
     <h1>Média do aluno v1.0</h1>
-    <button onclick="calcular()">
-        <p>Calcular média</p>
-    </button>
-    <p id="resultado">O resultado vai aparecer aqui...</p>
+    <button onclick="calculo()">Calcular média</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
 
-    <script>
-        var res = document.getElementById('resultado')
-
-        function calcular() {
-            // Nome do aluno
-            var nome = String(prompt('Qual é o nome do aluno? '))
-
-            // Sua primeira nota
-            var nota_1 = parseFloat(prompt(`Qual foi a primeira nota de ${nome}?`))
-
-            // Sua segunda nota
-            var nota_2 = parseFloat(prompt(`Além de ${nota_1}, qual foi a outra nota de ${nome}?`))
-
-            // Resultados
-            res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>.</p>`
-
-            res.innerHTML += `<p>As notas obtidas foram <mark>${nota_1} e ${nota_2}</mark>.</p>`
-
-            res.innerHTML += `<p>A média final será <mark>${(nota_1 + nota_2) / 2}</mark>.</p>`
-        }
-    </script>
+    <script src="ex007.js"></script>
 </body>
-
 </html>

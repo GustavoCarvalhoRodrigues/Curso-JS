@@ -1,12 +1,11 @@
-var res = document.getElementById("resultado");
+var res = document.getElementById('res');
 var contador = 0;
 
-function ContadorClique() {
-  contador++;
-  res.innerHTML = `O contador está com <mark>${contador}</mark> cliques.`;
+function adicionou() {
+    contador ++
+    res.innerHTML = `O contador está com <mark>${contador}</mark> cliques.`
 }
 
-function reset() {
-    var contador = 0;
-    res.innerHTML = null;
+function removeu() {
+    res.innerHTML = null
 }

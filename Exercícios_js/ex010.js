@@ -1,17 +1,17 @@
-var res = document.getElementById("resultado");
+var res = document.getElementById("res");
 
-function ação1() {
+function one() {
   res.innerHTML += "<p>Clicou no primeiro botão</p>";
 }
 
-function ação2() {
+function two() {
   res.innerHTML += "<p>Clicou no segundo botão</p>";
 }
 
-function ação3() {
-  res.innerHTML += "<p>Clicou no terceiro botão</p>";
+function three() {
+  res.innerHTML += "<p>Clicou no tercerio botão</p>";
 }
 
-function ação4() {
+function four() {
   res.innerHTML += "<p>Clicou no quarto botão</p>";
 }

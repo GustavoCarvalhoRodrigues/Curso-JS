@@ -1,32 +1,31 @@
-function EscolhaMes() {
-  var meses = String(prompt("Digite o mês em extenso (ex: Setembro) "));
+function mes() {
+    var mes = String(prompt("Digite o mês em extenso (ex:Setembro)"));
 
-  var res = document.getElementById("resultado");
-  var estacao;
-
-  switch (meses) {
-    case "Janeiro":
-    case "Fevereiro":
-    case "Março":
-      estacao = "VERÃO";
-      break;
-    case "Abril":
-    case "Maio":
-    case "Junho":
-      estacao = "Outono";
-      break;
-    case "Julho":
-    case "Agosto":
-    case "Setembro":
-      estacao = "Inverno";
-      break;
-    case "Outubro":
-    case "Novembro":
-    case "Dezembro":
-      break;
-    default:
-      estacao = "INDEFINIDA";
-      break;
-  }
-  res.innerHTML = `No mês de <mark>${meses}</mark>, estamos na estação <mark><strong>${estacao}</strong></mark>`;
+    var res = document.getElementById("res");
+    var estação = null;
+    switch (mes) {
+        case 'Janeiro':
+        case 'Fevereiro':
+        case 'Março':
+            estação = 'Verão';
+            break;
+        case 'Abril':
+        case 'Maio':
+        case 'Junho':
+            estação = 'Outono';
+            break;
+        case 'Julho':
+        case 'Agosto':
+        case 'Setembro':
+            estação = 'Inverno';
+            break;
+        case 'Outubro':
+        case 'Novembro':
+        case 'Dezembro':
+            estação = 'Primavera';
+            break;
+        default:
+            estação = 'INDEFINIDA'
+    }
+    res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><strong>${estação}</strong></mark>.`;
 }

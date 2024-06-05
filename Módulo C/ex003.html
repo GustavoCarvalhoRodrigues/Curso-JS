@@ -2,46 +2,46 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando Número</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Somando Número</title>
 </head>
 <style>
-    body {
-        font: normal 18pt Arial;
-    }
+  body {
+    font: normal 18pt Arial;
+  }
 
-    input {
-        font: normal 18pt Arial;
-    }
+  input {
+    font: normal 18pt Arial;
+    width: 100px;
+  }
 
-    #tn1,
-    #tn2 {
-        width: 100px;
-    }
+  div#res {
+    margin-top: 20px;
+  }
 </style>
 
 <body>
-    <h1>Somando Números</h1>
-    <input type="number" name="txtn1" id="tn1"> +
-    <input type="number" name="txtn2" id="tn2">
-    <input class="botao" type="button" value="Somar">
-    <div id="res">
-        <p>Resultado</p>
-    </div>
-    <script>
-        var botao = document.getElementsByClassName('botao')[0]
-        botao.addEventListener('click', somar)
-        function somar() {
-            var txtn1 = document.querySelector('input#tn1')
-            var txtn2 = document.querySelector('input#tn2')
-            var res = document.getElementById('res')
-            var n1 = Number(txtn1.value)
-            var n2 = Number(txtn2.value)
-            var soma = n1 + n2
-            res.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a<strong> ${soma}</strong></p>`
-        }
-    </script>
+  <h1>Somando Números</h1>
+  <input type="number" name="txtn1" id="tn1" /> +
+  <input type="number" name="txtn2" id="tn2" />
+  <input class="botao" type="button" value="Somar" />
+  <div id="res">
+    <p>Resultado</p>
+  </div>
+  <script>
+    var botao = document.getElementsByClassName("botao")[0];
+    botao.addEventListener("click", somar);
+    function somar() {
+      var txtn1 = document.querySelector("input#tn1");
+      var txtn2 = document.querySelector("input#tn2");
+      var res = document.getElementById("res");
+      var n1 = Number(txtn1.value);
+      var n2 = Number(txtn2.value);
+      var soma = n1 + n2;
+      res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`;
+    }
+  </script>
 </body>
 
 </html>

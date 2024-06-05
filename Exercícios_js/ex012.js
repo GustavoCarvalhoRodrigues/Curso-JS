@@ -1,9 +1,6 @@
-var res = document.getElementById("resultado");
-
-function parOUímpar() {
-  // Número digitado
+function ParOuImpar() {
   var num = Number(prompt("Digite um número:"));
-  // Condição sendo par ou ímpar
+  var res = document.getElementById("res");
   if (num % 2 == 0) {
     res.innerHTML = `O número ${num} que foi digitado é <strong>PAR!</strong>`;
   } else {

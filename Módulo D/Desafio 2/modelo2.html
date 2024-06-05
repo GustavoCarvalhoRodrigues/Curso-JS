@@ -2,38 +2,29 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo2.css">
-    <title>Verificador de Idade</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo2.css" />
+    <title>Verificador de idade</title>
 </head>
 
 <body>
-    <header>
-        <h1>Verificador de Idade</h1>
-    </header>
-    <section>
-        <div>
-            <p>Ano de Nascimento:
-                <input type="number" name="txtano" id="txtano" min="0">
-            </p>
-            <p>Sexo:
-                <input type="radio" name="radsex" id="masc" checked>
-                <label for="masc">Masculino</label>
-                <input type="radio" name="radsex" id="fem">
-                <label for="fem">Feminino</label>
-            </p>
-            <p>
-                <input type="button" value="Verificar" onclick="verificar()">
-            </p>
-        </div>
-        <div id="res">
-                Preencha os dados acima para ver o resultado!
-        </div>
-    </section>
-    <footer>
-        <p>&copy; CursoemVideo</p>
-    </footer>
+    <h1>Verificador de Idade</h1>
+    <main>
+        <p>
+            Ano de Nascimento:
+            <input type="number" name="Formsex" id="nasc" min="0" />
+        </p>
+        <p>
+            Sexo: <input type="radio" name="radsex" id="msex" checked />
+            <label for="msex">Masculino</label>
+            <input type="radio" name="radsex" id="fsex" />
+            <label for="fsex">Feminino</label>
+        </p>
+        <input type="button" value="Verificar" onclick="verificou()" />
+        <p id="resultado">Preencha os dados acima para ver o resultado!</p>
+    </main>
+    <footer>&copy; CursoemVideo</footer>
     <script src="script2.js"></script>
 </body>
 

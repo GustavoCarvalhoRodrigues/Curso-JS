@@ -1,39 +1,37 @@
-var agora = new Date()
-var DiaSem = agora.getDay()
+var dia = new Date();
+var Dsemana = dia.getDay(); // Dia da semana
 
 /*
-   0 = Domingo
-   1 = Segunda
-   2 = Terça
-   3 = Quarta
-   4 = Quinta
-   5 = Sexta
-   6 = Sábado
+    0 = domingo
+    1 = segunda
+    2 = terça
+    3 = quarta
+    4 = quinta
+    5 = sexta
+    6 = sábado
+
 */
 
-switch (DiaSem) {
+switch (Dsemana) {
     case 0:
-        console.log('Domingo')
-        break
+        console.log("Domingo");
+        break;
     case 1:
-        console.log('Segunda')
-        break
+        console.log("Segunda");
+        break;
     case 2:
-        console.log('terça')
-        break
+        console.log("Terça");
+        break;
     case 3:
-        console.log('Quarta')
-        break
+        console.log("Quarta");
+        break;
     case 4:
-        console.log('Quinta')
-        break
+        console.log("Quinta");
+        break;
     case 5:
-        console.log('Sexta')
-        break
+        console.log("Sexta");
+        break;
     case 6:
-        console.log('Sábado')
-        break
-    default:
-        console.log('[Erro] dia inválido')
-        break
+        console.log("Sábado");
+        break;
 }
